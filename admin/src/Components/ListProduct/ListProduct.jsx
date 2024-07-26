@@ -7,7 +7,7 @@ export default function ListProduct(){
     const [allproducts,setAllProducts] = useState([]);
 
     const fetchInfo = async()=>{
-        await fetch('https://e-commerce-backend-x2d8.onrender.com')
+        await fetch('https://e-commerce-backend-x2d8.onrender.com/allproducts')
         .then((res)=>res.json())
         .then((data)=>{setAllProducts(data)})
     }
@@ -17,7 +17,7 @@ export default function ListProduct(){
     },[])
 
     const remove_product = async(id)=>{
-        await fetch('https://e-commerce-backend-x2d8.onrender.com',{
+        await fetch('https://e-commerce-backend-x2d8.onrender.com/removeproduct',{
             method:'POST',
             headers:{
                 Accept:'application/json',
