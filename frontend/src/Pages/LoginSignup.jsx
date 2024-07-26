@@ -17,7 +17,7 @@ export default function LoginSignup(){
    const login = async()=>{
       console.log("Login function executed",formData);
       let responseData;
-      await fetch('https://e-commerce-backend-x2d8.onrender.com',{
+      await fetch('https://e-commerce-backend-x2d8.onrender.com/login',{
          method:'POST',
          headers:{
             Accept:'application/form-data',
@@ -38,7 +38,7 @@ export default function LoginSignup(){
    const signup = async()=>{
       console.log("signup function executed",formData);
       let responseData;
-      await fetch('https://e-commerce-backend-x2d8.onrender.com',{
+      await fetch('https://e-commerce-backend-x2d8.onrender.com/signup',{
          method:'POST',
          headers:{
             Accept:'application/form-data',
